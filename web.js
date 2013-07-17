@@ -7,8 +7,8 @@ var buffer1 = new Buffer(1026);
 var len = buffer1.write("this is a test");
 
 app.get('/', function(request, response) {
-  response.send(buffer1.toString('utf-8',0,buffer1.length));
-//  response.send("\n" + str1);
+  response.send(buffer1.toString('utf-8',0,len));
+// response.send("\n" + str1);
 });
 
 var port = process.env.PORT || 5000;
