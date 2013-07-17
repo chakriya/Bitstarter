@@ -10,7 +10,7 @@ var len = buffer1.write(fs.readFileSync('index.html','utf-8'));
 
 app.get('/', function(request, response) {
   response.send(buffer1.toString('utf-8',0,len));
-// response.send("\n" + data);
+ response.send("\n tese");
 });
 
 var port = process.env.PORT || 5000;
