@@ -40,7 +40,7 @@ var assertFileExists = function(infile) {
 
 
 var assertURLExists = function(inurl) {
-    var strurl = infile.toString();
+    var strurl = inurl.toString();
     request = rest.get(strurl);
     assertURLExists = request.success;
 };
