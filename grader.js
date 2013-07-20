@@ -85,7 +85,7 @@ process.argv.forEach(function(val, index, array){
     console.log(index + ';' + val);
 });
 
-    if(clone(assertURLExists){
+    if(clone(assertURLExists)){
 	var checkJson = checkHTMLFile("outfile.txt",program.checks); 
        }else{
     var checkJson = checkHtmlFile(program.file, program.checks);
