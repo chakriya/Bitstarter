@@ -42,7 +42,9 @@ var assertFileExists = function(infile) {
 
 var assertURLExists = function(inurl) {
     var strurl = inurl.toString();
-    request(strurl).pipe(fs.createWriteStream('output.txt'));
+    fs.writeFileSync("output.txt",rest.get(strurl);
+
+//    request(strurl).pipe(fs.createWriteStream('output.txt'));
     return "output.txt";
 };
 
@@ -86,7 +88,7 @@ process.argv.forEach(function(val, index, array){
 });
 
     if(clone(assertURLExists)){
-	var checkJson = checkHTMLFile("outfile.txt",program.checks); 
+	var checkJson = checkHtmlFile("outfile.txt",program.checks); 
        }else{
     var checkJson = checkHtmlFile(program.file, program.checks);
 	   }
