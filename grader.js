@@ -64,9 +64,8 @@ var getURL = function(url, complete) {
 	    complete(out);
 	}catch(e){
 	    console.log('response improperly formatted in', url);
-	    complete(false);
-	}
-}}
+	    complete(false);}
+	}};
 
 
 var clone = function(fn) {
