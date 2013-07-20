@@ -42,7 +42,7 @@ var assertFileExists = function(infile) {
 
 var assertURLExists = function(inurl) {
     var strurl = inurl.toString();
-    fs.writeFileSync("output.txt",rest.get(strurl);
+    fs.writeFileSync("output.txt",rest.get(strurl));
 
 //    request(strurl).pipe(fs.createWriteStream('output.txt'));
     return "output.txt";
