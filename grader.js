@@ -25,6 +25,7 @@ var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
 var rest = require('restler');
+var request = require('request'); 
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
 var URL_DEFAULT = "http://www.google.com";
@@ -41,8 +42,8 @@ var assertFileExists = function(infile) {
 
 var assertURLExists = function(inurl) {
     var strurl = inurl.toString();
-    request = rest.get(strurl);
-    assertURLExists = request.success;
+    request(strurl).pipe(fs.createWriteStream('output.txt'));
+    return "output.txt";
 };
 
 var cheerioHtmlFile = function(htmlfile) {
@@ -84,9 +85,12 @@ process.argv.forEach(function(val, index, array){
     console.log(index + ';' + val);
 });
 
+    if(clone(assertURLExists){
+	var checkJson = checkHTMLFile("outfile.txt",program.checks); 
+       }else{
     var checkJson = checkHtmlFile(program.file, program.checks);
+	   }
     var outJson = JSON.stringify(checkJson, null, 4);
-
     console.log(outJson);
 } else {
     exports.checkHtmlFile = checkHtmlFile;
