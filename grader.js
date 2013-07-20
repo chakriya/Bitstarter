@@ -77,7 +77,7 @@ if(require.main == module) {
     program
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
-        .option('-u, --url <str_ulr>', 'url to scan', clone(assertFileExists), URL_DEFAULT)
+        .option('-u, --url <str_ulr>', 'url to scan', clone(assertUrlExists), URL_DEFAULT)
         .parse(process.argv);
 
 process.argv.forEach(function(val, index, array){
