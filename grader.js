@@ -57,16 +57,7 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 };
 
 
-var getURL = function(url, complete) {
-    rest.get(url).on('complete',function(data,request){
-	try{
-	    var out = JSON.parse(data);
-	    complete(out);
-	}catch(e){
-	    console.log('response improperly formatted in', url);
-	    complete(false);}
-	}};
-
+//    rest.get(url).on('complete',function(data,request){
 
 var clone = function(fn) {
     // Workaround for commander.js issue.
