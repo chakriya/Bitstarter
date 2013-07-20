@@ -38,6 +38,13 @@ var assertFileExists = function(infile) {
     return instr;
 };
 
+
+var assertURLExists = function(inurl) {
+    var strurl = infile.toString();
+    request = rest.get(strurl);
+    assertURLExists = request.success;
+};
+
 var cheerioHtmlFile = function(htmlfile) {
     return cheerio.load(fs.readFileSync(htmlfile));
 };
