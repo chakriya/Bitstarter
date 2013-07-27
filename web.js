@@ -4,7 +4,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 var buffer1 = new Buffer(102600000);
-var len = buffer1.write(fs.readFileSync('indexANSWER.html','utf-8'));
+var len = buffer1.write(fs.readFileSync('index.html','utf-8'));
 
 //var len = buffer1.write("str1");
 
